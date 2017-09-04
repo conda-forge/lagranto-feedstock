@@ -1,7 +1,6 @@
 {% set name = "Lagranto" %}
 {% set version = "0.1.5" %}
-{% set sha256 = "d29327bad8936d7ad3ae940d1ee8f8a1cc1cdb628d952df80f70ba0d783e21ff
-"%}
+{% set sha256 = "61fb0f710cec1850c211b34e4162c48a61474d7b75fc24e01408574043c61327"%}
 
 
 package:
@@ -10,11 +9,11 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://git.iac.ethz.ch/npiaget/Lagranto/repository/v{{version}}/archive.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record record.txt
   skip: True  # [win]
 
