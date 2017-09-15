@@ -1,6 +1,6 @@
 {% set name = "Lagranto" %}
 {% set version = "0.1.5" %}
-{% set sha256 = "61fb0f710cec1850c211b34e4162c48a61474d7b75fc24e01408574043c61327"%}
+{% set sha256 = "0cb9e4405563a0c0c0ba669823a02128250b5f4f806f0beaf8b732b5cd9073fb"%}
 
 
 package:
@@ -13,7 +13,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 3
   script: python setup.py install --single-version-externally-managed --record record.txt
   skip: True  # [win]
 
