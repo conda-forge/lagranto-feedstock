@@ -9,11 +9,11 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://git.iac.ethz.ch/npiaget/Lagranto/repository/v{{version}}/archive.tar.gz
+  url: https://git.iac.ethz.ch/atmosdyn/Lagranto/repository/v{{version}}/archive.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 3
+  number: 4
   script: python setup.py install --single-version-externally-managed --record record.txt
   skip: True  # [win]
 
@@ -42,14 +42,14 @@ test:
     - py.test
  
 about:
-  home: https://git.iac.ethz.ch/npiaget/Lagranto
+  home: http://www.lagranto.ethz.ch
   license: GPL-3.0
   license_family: GPL
   license_file: LICENSE.txt
   summary: 'Library to work with trajectories.'
 
   doc_url: https://lagranto.readthedocs.io/en/latest/
-  dev_url: https://git.iac.ethz.ch/npiaget/Lagranto
+  dev_url: https://git.iac.ethz.ch/atmosdyn/Lagranto
 
 extra:
   recipe-maintainers:
