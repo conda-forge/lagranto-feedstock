@@ -1,6 +1,6 @@
 {% set name = "Lagranto" %}
-{% set version = "0.1.5" %}
-{% set sha256 = "61fb0f710cec1850c211b34e4162c48a61474d7b75fc24e01408574043c61327"%}
+{% set version = "0.1.6" %}
+{% set sha256 = "0515e65a19cd35f6455f67a9870ff14c75bfed9f3ad928c6d9ac5f7e616e7a88"%}
 
 
 package:
@@ -9,13 +9,13 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://git.iac.ethz.ch/npiaget/Lagranto/repository/v{{version}}/archive.tar.gz
+  url: https://git.iac.ethz.ch/atmosdyn/Lagranto/repository/v{{version}}/archive.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
-  skip: True  # [win]
+  skip: true  # [win]
 
 
 requirements:
@@ -42,14 +42,14 @@ test:
     - py.test
  
 about:
-  home: https://git.iac.ethz.ch/npiaget/Lagranto
+  home: http://www.lagranto.ethz.ch
   license: GPL-3.0
   license_family: GPL
   license_file: LICENSE.txt
   summary: 'Library to work with trajectories.'
 
   doc_url: https://lagranto.readthedocs.io/en/latest/
-  dev_url: https://git.iac.ethz.ch/npiaget/Lagranto
+  dev_url: https://git.iac.ethz.ch/atmosdyn/Lagranto
 
 extra:
   recipe-maintainers:
