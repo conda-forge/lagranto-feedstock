@@ -1,6 +1,6 @@
 {% set name = "Lagranto" %}
 {% set version = "0.1.7" %}
-{% set sha256 = "59065856dcb7994b0220a5aa9c587bd49b1b4f65c2bf7608ba5a8b82c1dbd3c4"%}
+{% set sha256 = "17babbf24a91760fdebc2deda10efd67b97399078721347052b9d49fa0ba4286"%}
 
 
 package:
