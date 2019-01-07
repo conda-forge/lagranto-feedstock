@@ -34,7 +34,7 @@ test:
   imports:
     - lagranto
   requires:
-    - pytest
+    - pytest <4
   source_files:
     - tests
   commands:
