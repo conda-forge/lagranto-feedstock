@@ -22,7 +22,7 @@ requirements:
     - pip
   run:
     - python
-    - numpy <1.15  # [py2k]
+    - numpy <1.14  # [py2k]
     - numpy  # [py3k]
     - cartopy
     - netcdf4
