@@ -15,8 +15,6 @@ source:
 build:
   number: 1001
   script: "{{ PYTHON }} -m pip install . -vv --no-deps"
-  skip: True  # [win]
-
 
 requirements:
   host:
