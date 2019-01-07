@@ -18,7 +18,7 @@ Current build status
 
 [![Linux](https://img.shields.io/circleci/project/github/conda-forge/lagranto-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/lagranto-feedstock)
 [![OSX](https://img.shields.io/travis/conda-forge/lagranto-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/lagranto-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/lagranto-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/lagranto-feedstock/branch/master)
+![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
 ====================
