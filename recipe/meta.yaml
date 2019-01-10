@@ -40,6 +40,7 @@ test:
   commands:
     # FIXME - commenting out tests for python 2.7 due to bug in upstream package
     # See issue here: https://github.com/conda-forge/lagranto-feedstock/issues/9
+    - export MPLBACKEND="AGG"  # [not py2k]
     - pytest  # [not py2k]
 
 about:
