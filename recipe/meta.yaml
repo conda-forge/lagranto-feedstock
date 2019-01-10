@@ -48,7 +48,7 @@ about:
   license: GPL-3.0
   license_family: GPL
   license_file: LICENSE.txt
-  summary: 'Library to work with trajectories.'
+  summary: 'Library to work with trajectories.' 
   doc_url: https://lagranto.readthedocs.io/en/latest/
   dev_url: https://git.iac.ethz.ch/atmosdyn/Lagranto
 
