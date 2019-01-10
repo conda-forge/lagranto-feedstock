@@ -38,7 +38,9 @@ test:
   source_files:
     - tests
   commands:
-    - py.test
+    # FIXME - commenting out tests for python 2.7 due to bug in upstream package
+    # See issue here: https://github.com/conda-forge/lagranto-feedstock/issues/9
+    - pytest  # [not py2k]
 
 about:
   home: http://www.lagranto.ethz.ch
