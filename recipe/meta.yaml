@@ -1,6 +1,6 @@
 {% set name = "Lagranto" %}
 {% set version = "0.1.7" %}
-{% set sha256 = "17babbf24a91760fdebc2deda10efd67b97399078721347052b9d49fa0ba4286"%}
+{% set sha256 = "17babbf24a91760fdebc2deda10efd67b97399078721347052b9d49fa0ba4286" %}
 
 
 package:
@@ -13,41 +13,41 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
-  script: python setup.py install --single-version-externally-managed --record record.txt
-  skip: true  # [win]
-
+  number: 1001
+  skip: True  # [win]
+  script: "{{ PYTHON }} -m pip install . -vv --no-deps"
 
 requirements:
-  build:
+  host:
     - python
-    - setuptools
-
+    - pip
   run:
     - python
-    - numpy
+    - numpy <1.14  # [py2k]
+    - numpy  # [py3k]
     - cartopy
     - netcdf4
     - path.py
     - matplotlib
 
 test:
-  imports:
-    - lagranto
   requires:
     - pytest
   source_files:
     - tests
   commands:
-    - py.test
- 
+    # FIXME - commenting out tests for python 2.7 due to bug in upstream package
+    # See issue here: https://github.com/conda-forge/lagranto-feedstock/issues/9
+    - export MPLBACKEND="AGG"
+    - python -c 'import lagranto'
+    - pytest  # [not py2k]
+
 about:
   home: http://www.lagranto.ethz.ch
   license: GPL-3.0
   license_family: GPL
   license_file: LICENSE.txt
   summary: 'Library to work with trajectories.'
-
   doc_url: https://lagranto.readthedocs.io/en/latest/
   dev_url: https://git.iac.ethz.ch/atmosdyn/Lagranto
 
