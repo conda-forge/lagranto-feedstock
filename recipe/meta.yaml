@@ -31,8 +31,6 @@ requirements:
     - matplotlib
 
 test:
-  imports:
-    - lagranto
   requires:
     - pytest
   source_files:
@@ -40,7 +38,8 @@ test:
   commands:
     # FIXME - commenting out tests for python 2.7 due to bug in upstream package
     # See issue here: https://github.com/conda-forge/lagranto-feedstock/issues/9
-    - export MPLBACKEND="AGG"  # [not py2k]
+    - export MPLBACKEND="AGG"
+    - "{{ PYTHON }} -c 'import lagranto'"
     - pytest  # [not py2k]
 
 about:
@@ -48,7 +47,7 @@ about:
   license: GPL-3.0
   license_family: GPL
   license_file: LICENSE.txt
-  summary: 'Library to work with trajectories.' 
+  summary: 'Library to work with trajectories.'
   doc_url: https://lagranto.readthedocs.io/en/latest/
   dev_url: https://git.iac.ethz.ch/atmosdyn/Lagranto
 
