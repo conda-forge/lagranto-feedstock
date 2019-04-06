@@ -1,6 +1,6 @@
 {% set name = "Lagranto" %}
-{% set version = "0.1.7" %}
-{% set sha256 = "17babbf24a91760fdebc2deda10efd67b97399078721347052b9d49fa0ba4286" %}
+{% set version = "0.1.8" %}
+{% set sha256 = "622df2ae79da67c9ff612bce0e830e4639bc7633c4c1df1de9fc0a34b705f7f3" %}
 
 
 package:
@@ -13,7 +13,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1001
+  number: 0
   skip: True  # [win]
   script: "{{ PYTHON }} -m pip install . -vv --no-deps"
 
