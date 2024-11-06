@@ -1,6 +1,6 @@
 {% set name = "Lagranto" %}
-{% set version = "0.1.7" %}
-{% set sha256 = "17babbf24a91760fdebc2deda10efd67b97399078721347052b9d49fa0ba4286" %}
+{% set version = "0.2.0" %}
+{% set sha256 = "014ae176d59c7725e9b5a66fd50e8384640733cae3575feaf8167d9059351a5f" %}
 
 
 package:
@@ -9,13 +9,13 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://git.iac.ethz.ch/atmosdyn/Lagranto/repository/v{{version}}/archive.tar.gz
+  url: https://git.iac.ethz.ch/atmosdyn/Lagranto/repository/v{{ version }}/archive.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 1002
-  skip: True  # [win]
-  script: "{{ PYTHON }} -m pip install . -vv --no-deps"
+  number: 0
+  skip: true  # [win]
+  script: {{ PYTHON }} -m pip install . -vv --no-deps
 
 requirements:
   host:
@@ -47,7 +47,7 @@ about:
   license: GPL-3.0
   license_family: GPL
   license_file: LICENSE.txt
-  summary: 'Library to work with trajectories.'
+  summary: Library to work with trajectories.
   doc_url: https://lagranto.readthedocs.io/en/latest/
   dev_url: https://git.iac.ethz.ch/atmosdyn/Lagranto
 
