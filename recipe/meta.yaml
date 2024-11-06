@@ -9,11 +9,11 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://git.iac.ethz.ch/atmosdyn/Lagranto/repository/v{{version}}/archive.tar.gz
+  url: https://git.iac.ethz.ch/atmosdyn/Lagranto/repository/v{{ version }}/archive.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 1002
+  number: 1003
   skip: True  # [win]
   script: "{{ PYTHON }} -m pip install . -vv --no-deps"
 
